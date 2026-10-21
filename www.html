@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل فرص وخدمات الشباب بالمغرب 🚀</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans p-6">
+
+    <div class="max-w-4xl mx-auto space-y-8">
+        <!-- Header -->
+        <header class="text-center py-8 bg-slate-900 rounded-3xl shadow-xl border border-slate-800 px-4">
+            <h1 class="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">بوابة فرص وخدمات الشباب 🇲🇦</h1>
+            <p class="text-slate-400 text-sm md:text-base">كل ما تحتاجه من روابط العمل، التكوين، والمنح في منصة واحدة سريعة</p>
+            
+            <!-- Search Bar -->
+            <div class="mt-6 max-w-xl mx-auto">
+                <input type="text" id="searchInput" placeholder="ابحث عن منصة، شغل، منحة (مثال: Anapec, Marjane, منحة)..." 
+                    class="w-full bg-slate-950 border border-slate-700 rounded-2xl px-5 py-3 focus:outline-none focus:border-emerald-500 text-slate-200 shadow-inner">
+            </div>
+        </header>
+
+        <!-- Links Grid -->
+        <div id="linksGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            
+            <!-- Card 1 -->
+            <a href="https://www.anapec.org" target="_blank" class="link-card bg-slate-900 p-5 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition transform hover:-translate-y-1 block shadow-lg">
+                <h3 class="font-bold text-lg text-emerald-400 mb-1">ANAPEC</h3>
+                <p class="text-slate-400 text-sm">الوكالة الوطنية إنعاش التشغيل والكفاءات - البحث عن عروض شغل.</p>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="https://recrutement.marjane.ma" target="_blank" class="link-card bg-slate-900 p-5 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition transform hover:-translate-y-1 block shadow-lg">
+                <h3 class="font-bold text-lg text-emerald-400 mb-1">Marjane Recrutement</h3>
+                <p class="text-slate-400 text-sm">بوابة التوظيف وعروض العمل بأسواق مرجان وميكروما.</p>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="https://www.ofppt.ma" target="_blank" class="link-card bg-slate-900 p-5 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition transform hover:-translate-y-1 block shadow-lg">
+                <h3 class="font-bold text-lg text-emerald-400 mb-1">OFPPT / CMC</h3>
+                <p class="text-slate-400 text-sm">مكتب التكوين المهني ومدن المهن والكفاءات - فضاء المتدربين.</p>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="https://www.minhaty.ma" target="_blank" class="link-card bg-slate-900 p-5 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition transform hover:-translate-y-1 block shadow-lg">
+                <h3 class="font-bold text-lg text-emerald-400 mb-1">منصة منحتى (Minhaty)</h3>
+                <p class="text-slate-400 text-sm">تتبع ودراسة طلبات الحصول على المنحة الجامعية والتكوينية.</p>
+            </a>
+
+            <!-- Card 5 -->
+            <a href="https://www.service-public.ma" target="_blank" class="link-card bg-slate-900 p-5 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition transform hover:-translate-y-1 block shadow-lg">
+                <h3 class="font-bold text-lg text-emerald-400 mb-1">بوابة الإدارة المغربية</h3>
+                <p class="text-slate-400 text-sm">دليل الوثائق الإدارية والمساطر القانونية بالمغرب.</p>
+            </a>
+
+            <!-- Card 6 -->
+            <a href="https://www.taalim.ma" target="_blank" class="link-card bg-slate-900 p-5 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition transform hover:-translate-y-1 block shadow-lg">
+                <h3 class="font-bold text-lg text-emerald-400 mb-1">Massar / Taalim.ma</h3>
+                <p class="text-slate-400 text-sm">فضاء التلامذة والمسار الدراسي والنتائج.</p>
+            </a>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center text-slate-500 text-sm py-4 border-t border-slate-900">
+            تم التطوير بواسطة مطور شاب طموح 🚀 &copy; 2026
+        </footer>
+    </div>
+
+    <!-- JavaScript for Live Search Filtering -->
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const linksGrid = document.getElementById('linksGrid');
+        const cards = linksGrid.getElementsByClassName('link-card');
+
+        searchInput.addEventListener('input', function(e) {
+            const term = e.target.value.toLowerCase().trim();
+
+            for (let i = 0; i < cards.length; i++) {
+                const text = cards[i].innerText.toLowerCase();
+                if (text.includes(term)) {
+                    cards[i].style.display = "block";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
